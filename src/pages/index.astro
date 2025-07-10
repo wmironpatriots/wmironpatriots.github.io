@@ -7,6 +7,20 @@ import HomeFooter from '../components/HomeFooter.astro';
 ---
 
 <Base>
+	<div class="alert">
+		<span class="close-btn" id="close-btn" onclick="this.parentElement.style.opacity='0'; this.parentElement.style.display='none';">&times;</span>
+		Email us now to RSVP for Sponsor Night (September 4th, 2025)!
+	</div>
+
+	<script>
+		var close = document.getElementById("close-btn");
+		close.onclick = function() {
+			var div = this.parentElement;
+			div.style.opacity = '0';
+			setTimeout(function(){ div.style.display = "none"; }, 200);
+		}
+	</script>
+
 	<div class="home-page-collection">
 		<div class="home-page__gallery"> <!-- make into interactive island - gallery image -->
 			<img src={RobotImg.src} alt="Robot"/>
@@ -173,5 +187,37 @@ import HomeFooter from '../components/HomeFooter.astro';
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
+	}
+
+	/*
+	*
+	* Alert information
+	*
+	*/
+	.alert {
+		padding: 20px;
+		background-color: #2196F3;
+		color: #FFF;
+		opacity: 1;
+		transition: opacity 0.6s;
+		z-index: 999;
+	}
+
+	.close-btn {
+		margin-left: 15px;
+		color: #FFF;
+		background-color: transparent;
+		font-weight: bold;
+		float: right;
+		font-size: 22px;
+		line-height: 20px;
+		cursor: pointer;
+		padding: 2px;
+		border-radius: 50%;
+		transition: 0.3s;
+	}
+
+	.close-btn:hover {
+		background-color: #99999962;
 	}
 </style>

@@ -22,11 +22,7 @@ const current = "about";
 				</header>
 
 				<div class="text-img-main">
-					<div class="item column">
-						<div class="image">
-							<img src={teamPicture.src} alt="team picture"/>
-						</div>
-
+					<div class="item">
 						<div class="text">
 							<p>
 								The Ward Melville Iron Patriots are a robotics team based in Ward Melville Senior High School in East Setauket, New York. Every year, the team participates in the FIRST Robotics Competition, in which teams across the world are given just a couple of weeks to build fully functioning 100+ lb robots to compete in an annual game. 
@@ -41,6 +37,10 @@ const current = "about";
 								Now approaching their 10th year, the WM Iron Patriots are ready to take on the Rebuilt season with a drive for even greater success.
 							</p>
 						</div>
+
+						<div class="image">
+							<img src={teamPicture.src} alt="team picture"/>
+						</div>
 					</div>
 				</div>
 			</main>
@@ -50,3 +50,20 @@ const current = "about";
 		</footer>
 	</article>
 </Base>
+
+<style>
+	.page-collection .text-img-main .item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.item div {
+		width: 100%;
+	}
+
+	.item .image {
+		width: 60%;
+	}
+</style>

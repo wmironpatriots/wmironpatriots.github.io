@@ -133,14 +133,6 @@ article {
 	width: 100%;
 }
 
-.text-img-main .column {
-	flex-direction: column;
-}
-
-.text-img-main .column div {
-	width: 70%;
-}
-
 footer {
 	padding-top: 1em;
 	text-align: center;

@@ -5,8 +5,8 @@ import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 
-const title = "Updates |";
-const current = "updates";
+const title = "Events |";
+const current = "events";
 
 let allPosts = await getCollection('posts');
 allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
@@ -21,7 +21,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
 
 			<main>
 				<header>
-					<h1>Updates</h1>
+					<h1>Events</h1>
 				</header>
 				
 				<div class="main">

@@ -110,7 +110,7 @@ article {
 	gap: 5em;
 }
 
-.text-img-main .inverted {
+.text-img-main .item .inverted {
 	flex-direction: row-reverse;
 }
 
@@ -118,13 +118,13 @@ article {
 	width: 50%;
 }
 
-.text-img-main .image {
+.text-img-main .item .image {
 	padding: 0.7em;
 	background: linear-gradient(to bottom left, #a0a0a0 0%, #e1e3e1 100%);
   box-shadow: 10px 10px #0e6a36;
 }
 
-.text-img-main .inverted .image {
+.text-img-main .item .inverted .image {
 	background: linear-gradient(to bottom left, #e1e3e1 0%, #a0a0a0 100%);
 	box-shadow: -10px 10px #0e6a36;
 }

@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+const title = "Events |";
+const current = "events";
+
+let allPosts = await getCollection('posts');
+allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
+---
+
+<Base title={title}> <!-- blog -->
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current}/>
+			</nav>
+
+			<main>
+				<header>
+					<h1>Events</h1>
+				</header>
+				
+				<div class="main">
+					{allPosts.map((post, index) => {
+						const href = `/blog/${post.data.slug}`;
+						return (
+							<div>
+								{ index !== 0 && <hr/> }
+								<div class="item">
+									<h2>
+										<a href={ href }>{post.data.title}</a>
+									</h2>
+									<p>{post.data.description}</p>
+									<div class="item-footer">
+										<span class="item-date">— {post.data.publishDate}</span>
+									</div>
+								</div>
+							</div>
+						)
+					})}
+				</div>
+			</main>
+		</div>
+		<footer>
+			<Footer />
+		</footer>
+	</article>
+</Base>
+
+<style>
+	.item {
+		max-width: 35em;
+	}
+
+	.item-date {
+		font-size: 70%;
+		font-style: italic;
+	}
+
+	hr {
+		margin-top: 2em;
+	}
+</style>

@@ -5,14 +5,17 @@ import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 
+import libraryImg from '../assets/library.jpg';
+import stemNightImg from '../assets/stemnight.jpg';
+import showcaseImg from '../assets/showcase.jpg';
+import kickoffImg from '../assets/kickoff.jpg';
+import parentNightImg from '../assets/parentnight.jpg';
+
 const title = "Events |";
 const current = "events";
-
-let allPosts = await getCollection('posts');
-allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
 ---
 
-<Base title={title}> <!-- blog -->
+<Base title={title}>
 	<article>
 		<div class="page-collection">
 			<nav>
@@ -24,25 +27,140 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
 					<h1>Events</h1>
 				</header>
 				
-				<div class="main">
-					{allPosts.map((post, index) => {
-						const href = `/blog/${post.data.slug}`;
-						return (
-							<div>
-								{ index !== 0 && <hr/> }
-								<div class="item">
-									<h2>
-										<a href={ href }>{post.data.title}</a>
-									</h2>
-									<p>{post.data.description}</p>
-									<div class="item-footer">
-										<span class="item-date">— {post.data.publishDate}</span>
-									</div>
-								</div>
-							</div>
-						)
-					})}
-				</div>
+        <div class="text-img-main"> <!-- change rectangles so they take up 75% of screen width - image and text are in same box -->
+          <!--
+					<div class="event-item"> 
+						<div class="text">
+							<h2>Library Event</h2>
+							<h5>November 15th</h5>
+						</div>
+
+						<div class="image">
+							<img src={libraryImg.src} alt="library"/>
+						</div>
+					</div>
+
+          <div class="event-item inverted"> 
+						<div class="text">
+							<h2>Library Event</h2>
+							<h5>December 2nd</h5>
+						</div>
+
+						<div class="image">
+							<img src={libraryImg.src} alt="library"/>
+						</div>
+					</div>
+
+          <div class="event-item"> 
+						<div class="text">
+							<h2>STEM Night</h2>
+							<h5>December 2nd</h5>
+						</div>
+
+						<div class="image">
+							<img src={stemNightImg.src} alt="stem night"/>
+						</div>
+					</div>
+
+          <div class="event-item"> invert it later
+						<div class="text">
+							<h2>Parents Night</h2>
+							<h5>December 18th</h5>
+						</div>
+
+						<div class="image">
+							<img src={parentNightImg.src} alt="parents night"/>
+						</div>
+					</div>
+
+          <div class="event-item"> 
+						<div class="text">
+							<h2>Library Event</h2>
+							<h5>January 3rd</h5>
+						</div>
+
+						<div class="image">
+							<img src={libraryImg.src} alt="library"/>
+						</div>
+					</div>
+
+          <div class="event-item inverted"> 
+						<div class="text">
+							<h2>Kickoff</h2>
+							<h5>January 10th</h5>
+						</div>
+
+						<div class="image">
+							<img src={kickoffImg.src} alt="kickoff"/>
+						</div>
+					</div>
+
+          <div class="event-item"> 
+						<div class="text">
+							<h2>Showcase Night</h2>
+							<h5>March 3rd</h5>
+						</div>
+
+						<div class="image">
+							<img src={showcaseImg.src} alt="showcase"/>
+						</div>
+					</div>
+
+          <div class="event-item inverted"> 
+						<div class="text">
+							<h2>Finger Lakes Regional (FLR)</h2>
+							<h5>March 11th - March 14th</h5>
+						</div>
+
+						<div class="image">
+							<img src={.src} alt="flr"/>
+						</div>
+					</div>
+
+          <div class="event-item"> 
+						<div class="text">
+							<h2>Long Island Regional (LIR)</h2>
+							<h5>March 19th - March 21st</h5>
+						</div>
+
+						<div class="image">
+							<img src={.src} alt="lir"/>
+						</div>
+					</div>
+					-->
+					<div style="height: 10%;" class="item"> 
+						<div class="text">
+							<h2>Parents Night</h2>
+							<h5>December 18th</h5>
+						</div>
+
+						<div style="visibility: hidden;" class="image">
+							<img src={parentNightImg.src} alt="library"/>
+						</div>
+					</div>
+
+					<div style="height: 10%;" class="item">
+						<div class="text">
+							<h2>Kickoff</h2>
+							<h5>January 10th</h5>
+						</div>
+
+						<div style="visibility: hidden;" class="image">
+							<img src={parentNightImg.src} alt="library"/>
+						</div>
+					</div>
+
+					<div style="height: 10%;" class="item">
+						<div class="text">
+							<h2>Showcase Night</h2>
+							<h5>March 3rd</h5>
+						</div>
+
+						<div style="visibility: hidden;" class="image">
+							<img src={parentNightImg.src} alt="library"/>
+						</div>
+					</div>
+        </div>
 			</main>
 		</div>
 		<footer>
@@ -52,16 +170,25 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
 </Base>
 
 <style>
-	.item {
-		max-width: 35em;
-	}
+/*.text-img-main .event-item {
+	display: flex;
+	flex-direction: row;
+	align-self: flex-start;
+	padding: 1.5em;
+	gap: 5em;
+	width: 75%;
+	background: linear-gradient(to bottom left, #e1e3e1 0%, #a0a0a0 100%);
+	box-shadow: -10px 10px #0e6a36;
+	color: #000000
+}
 
-	.item-date {
-		font-size: 70%;
-		font-style: italic;
-	}
+.text-img-main .inverted {
+	background: linear-gradient(to bottom left, #a0a0a0 0%, #e1e3e1 100%);
+  box-shadow: 10px 10px #0e6a36;
+	align-self: flex-end;
+}
 
-	hr {
-		margin-top: 2em;
-	}
+.text-img-main .event-item div {
+	width: 50%;
+}*/
 </style>

@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+import cascadeImg from '../assets/cascade.jpg';
+import goatImg from '../assets/decibel.jpg';
+import quincyImg from '../assets/quincy.jpg';
+
+const title = "Robots |";
+const current = "robots";
+---
+
+<Base title={title}>
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current} />
+			</nav>
+
+			<main>
+				<header>
+					<h1>Robots</h1>
+				</header>
+
+				<div class="text-img-main">
+					<div class="item"> <!-- img -> text -->
+						<div class="text">
+							<h2>Cascade</h2>
+							<h5>2025 - Reefscape</h5>
+							<p>Cascade is a 105 lb robot designed for the 2025 FRC competition. It has a full-width chute, a 2 stage cascade elevator, and a pivoting end effector. Cascade was rank 8 at the Hudson Valley Regional and rank 21 at the Long Island Regional in 2025.</p>
+						</div>
+
+						<div class="image"> <!-- add a border box outside -->
+							<img src={cascadeImg.src} alt="cascade"/>
+						</div>
+					</div>
+
+					<div class="item inverted">
+						<div class="text">
+							<h2>Decibel</h2>
+							<h5>2024 - Crescendo</h5>
+							<p>Decibel is a 104 lb robot designed for the 2024 FRC competition. It has a full-width over-the-bumper intake, a static shooter, and a dedicated amp mechanism. Decibel was rank 8 at the Hudson Valley Regional, earned the Innovation In Control Award, rank 2 at the Long Island Regional and earned the Quality Award in 2024.</p>
+						</div>
+
+						<div class="image">
+							<img src={goatImg.src} alt="decibel"/>
+						</div>
+					</div>
+
+					<div class="item"> 
+						<div class="text">
+							<h2>Quincy</h2>
+							<h5>2023 - Charged Up</h5>
+							<p>Quincy is a 125 lb robot designed for the 2023 FRC competition. It has a 43" arm paired with a wrist to grab both cones and cubes. Quincy was rank 27 at the Long Island Regional in 2023.</p>
+						</div>
+
+						<div class="image"> 
+							<img src={quincyImg.src} alt="quincy"/>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<Footer />
+		</footer>
+	</article>
+</Base>

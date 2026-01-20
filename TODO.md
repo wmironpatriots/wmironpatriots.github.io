@@ -1,9 +1,9 @@
 # TODO List
 List of implementations required
 
-- [ ] Implement fullpage.js
+- [ ] ~~Implement fullpage.js~~ (UPDATE: implement using pure css and html)
   - ***GENERAL***
-    - [ ] **Recieve license key**
+    ~~- [ ] **Recieve license key**~~
     - [ ] Media
       - [ ] *Videos* (auto play)
         - [ ] *Video background* (optional)

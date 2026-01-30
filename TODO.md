@@ -55,3 +55,6 @@ List of implementations required
   - [ ] Update and add onto **event page**
   - [ ] Add two subpages to **about page**
   - [ ] Redesign **contact page** (optional)
+
+
+<!-- https://docs.google.com/document/d/1l381AUC8LLL1S7mYAVhDWJ4uLWiRECP_2615Gg6inuo/edit?tab=t.0 -->

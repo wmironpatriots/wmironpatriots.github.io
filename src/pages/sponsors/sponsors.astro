@@ -1,0 +1,193 @@
+---
+/* Our Sponsors Page - Home page - add navigation bar to subpages */
+
+import Base from '../../layouts/Base.astro';
+import Footer from '../../components/Footer.astro';
+import NavigationBar from '../../components/NavigationBar.astro';
+
+/* 2025 to 2026 Sponsors */
+/* Plat */
+import tvStemImg25 from '../../assets/2526tvstem.png';
+import tvCsdImg25 from '../../assets/2526tvcsd.png';
+import doveImg25 from '../../assets/2526dove.png';
+import geneImg25 from '../../assets/2526genehaas.png';
+import kurianImg25 from '../../assets/2526kurian.png';
+/* Gold */
+import northAtlanticImg25 from '../../assets/2526north.png';
+import sigmaImg25 from '../../assets/2526sigma.png';
+import islandImg25 from '../../assets/2526island.png';
+import gseImg25 from '../../assets/2526gse.png';
+/* Silver */
+import monarchImg25 from '../../assets/2526monarch.png';
+import voxxImg25 from '../../assets/2526voxx.png';
+import intImg25 from '../../assets/2526intuitive.png';
+/* Bronze */
+import cateringImg25 from '../../assets/2526catering.png';
+import pastariaImg25 from '../../assets/2526pastaria.png';
+import bakeryImg25 from '../../assets/2526bakery.png';
+import pscImg25 from '../../assets/2526psc.png';
+import polyImg25 from '../../assets/2526poly.png';
+
+/* 2024 to 2025 Sponsors */
+/* Plat */
+import tvStemImg from '../../assets/tvstem.png';
+import tvCsdImg from '../../assets/tvcsd.png';
+/* Gold */
+import northAtlanticImg from '../../assets/northatlantic.png';
+import sigmaImg from '../../assets/sigma.png';
+import teconnectivityImg from '../../assets/teconnectivity.png';
+import gseImg from '../../assets/gse.png';
+import doveImg from '../../assets/dove.png';
+/* Silver */
+import cateringImg from '../../assets/catering.png';
+import pastariaImg from '../../assets/pastaria.png';
+/* Bronze */
+import nycTechImg from '../../assets/nyctech.png';
+import bakeryImg from '../../assets/bakery.png';
+import pscImg from '../../assets/psc.png';
+
+const title = "Sponsors |";
+const current = "sponsors";
+---
+
+<Base title={title}>
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current} />
+			</nav>
+
+			<main>
+				<header>
+					<h1>Sponsors</h1>
+				</header>
+
+				<div class="main">
+					<div>
+						<h2 class="title">2025 - 2026 Rebuilt Sponsors</h2>
+						<div class="item">
+							<h2>Platinum Sponsors</h2>
+							<section>
+								<img src={tvStemImg25.src} alt="tvstem"/>
+								<img src={tvCsdImg25.src} alt="tvcsd"/>
+								<img src={geneImg25.src} alt="gene haas"/>
+								<img src={doveImg25.src} alt="dove electronics"/>
+								<img src={kurianImg25.src} alt="kurian family"/>
+							</section>
+						</div>
+						<div class="item">
+							<h2>Gold Sponsors</h2>
+							<section>
+								<img src={northAtlanticImg25.src} alt="north atlantic"/>
+								<img src={sigmaImg25.src} alt="sigma"/>
+								<img src={islandImg25.src} alt="island components"/>
+								<img src={gseImg25.src} alt="gse"/>
+							</section>
+						</div>
+						<div class="item">
+							<h2>Silver Sponsors</h2>
+							<section>
+								<img src={monarchImg25.src} alt="monarch"/>
+								<img src={voxxImg25.src} alt="voxx"/>
+								<img src={intImg25.src} alt="intuitive"/>
+							</section>
+						</div>
+						<div class="item">
+							<h2>Bronze Sponsors</h2>
+							<section>
+								<img src={cateringImg25.src} alt="exquisite catering"/>
+								<img src={pastariaImg25.src} alt="setauket pastaria"/>
+								<img src={bakeryImg25.src} alt="gene haas"/>
+								<img src={pscImg25.src} alt="psc"/>
+								<img src={polyImg25.src} alt="polymaker"/>
+							</section>
+						</div>
+					</div>
+					
+					<div>
+						<h2 class="title">Past Sponsors</h2>
+						<h1>2024 - 2025 Reefscape Sponsors</h1>
+						<div class="past-sponsors">
+							<div class="item">
+								<h2>Platinum Sponsors</h2>
+								<section>
+									<img src={tvStemImg.src} alt="tvstem"/>
+									<img src={tvCsdImg.src} alt="tvcsd"/>
+								</section>
+							</div>
+							<div class="item">
+								<h2>Gold Sponsors</h2>
+								<section>
+									<img src={northAtlanticImg.src} alt="north atlantic"/>
+									<img src={sigmaImg.src} alt="sigma"/>
+									<img src={teconnectivityImg.src} alt="te connectivity"/>
+									<img src={gseImg.src} alt="gse"/>
+									<img src={doveImg.src} alt="dove"/>
+								</section>
+							</div>
+							<div class="item">
+								<h2>Silver Sponsors</h2>
+								<section>
+									<img src={cateringImg.src} alt="catering"/>
+									<img src={pastariaImg.src} alt="pastaria"/>
+								</section>
+							</div>
+							<div class="item">
+								<h2>Bronze Sponsors</h2>
+								<section>
+									<img src={nycTechImg.src} alt="nyc tech"/>
+									<img src={bakeryImg.src} alt="bakery"/>
+									<img src={pscImg.src} alt="psc"/>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<Footer />
+		</footer>
+	</article>
+</Base>
+
+<style>
+	img {
+		width: 30%;
+		height: 30%;
+	}
+
+	h2 {
+		font-size: 200%;
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-top: 0.5em;
+	}
+
+	.title {
+		font-size: 270%;
+	}
+
+	.main {
+		gap: 5em;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.item {
+		margin-bottom: 3em;
+	}
+
+	.item h2 {
+		margin-bottom: 0;
+	}
+
+	.past-sponsors h2 {
+		font-size: 150%;
+	}
+</style>

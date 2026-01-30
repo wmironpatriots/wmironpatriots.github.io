@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+import Footer from '../../components/Footer.astro';
+import NavigationBar from '../../components/NavigationBar.astro';
+
+const title = "Team Expenses |";
+const current = "sponsors";
+---
+
+<Base title={title}>
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current} />
+			</nav>
+
+			<main>
+				<header>
+					<h1>Team Expenses</h1>
+				</header>
+
+				<div class="main">
+          <div>
+            
+					</div>
+        </div>
+      </main>
+    </div>
+    <footer>
+			<Footer />
+		</footer>
+	</article>
+</Base>
+
+<style>
+	h2 {
+		font-size: 200%;
+	}
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-top: 0.5em;
+	}
+
+	.title {
+		font-size: 270%;
+	}
+
+	.main {
+		gap: 5em;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.item {
+		margin-bottom: 3em;
+	}
+
+	.item h2 {
+		margin-bottom: 0;
+	}
+</style>

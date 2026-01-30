@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import Footer from '../../components/Footer.astro';
+import NavigationBar from '../../components/NavigationBar.astro';
+
+import teamPicture from '../assets/teampicture.jpg';
+
+const title = "About | Our Board |";
+const current = "about";
+---
+
+<Base title={title}>
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current} />
+			</nav>
+
+			<main>
+				<header>
+					<h1>About</h1>
+				</header>
+
+				<div class="text-img-main">
+					<div class="item">
+						<div class="text">
+							<p>
+								<!-- add text -->
+							</p>
+						</div>
+
+						<div class="image">
+							<!-- add board members pic -->
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<Footer />
+		</footer>
+	</article>
+</Base>
+
+<style>
+	.page-collection .text-img-main .item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.item div {
+		width: 100%;
+	}
+
+	.item .image {
+		width: 60%;
+		align-self: center;
+	}
+</style>

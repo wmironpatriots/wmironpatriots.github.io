@@ -3,6 +3,11 @@ import Base from '../../layouts/Base.astro';
 import Footer from '../../components/Footer.astro';
 import NavigationBar from '../../components/NavigationBar.astro';
 
+import '../../styles/footer.css';
+
+import expensesImg2526 from '../../assets/2526expenses.png';
+import fundraisedImg2526 from '../../assets/2526fundraised.png';
+
 const title = "Sponsors | Team Expenses |";
 const current = "sponsors";
 ---
@@ -20,8 +25,12 @@ const current = "sponsors";
 				</header>
 
 				<div class="main">
-          <div>
-            
+          <div class="expenses">
+            <img src={expensesImg2526.src} alt="25-26 expenses"/>
+					</div>
+
+					<div class="fundraised">
+						<img src={fundraisedImg2526.src} alt="25-26 fundraised money"/>
 					</div>
         </div>
       </main>
@@ -33,33 +42,18 @@ const current = "sponsors";
 </Base>
 
 <style>
-	h2 {
-		font-size: 200%;
-	}
-
-	h3 {
-		margin-bottom: 0;
-	}
-
-	p {
-		margin-top: 0.5em;
-	}
-
-	.title {
-		font-size: 270%;
-	}
-
 	.main {
 		gap: 5em;
 		display: flex;
 		flex-direction: column;
 	}
 
-	.item {
-		margin-bottom: 3em;
+	.main div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-
-	.item h2 {
-		margin-bottom: 0;
+	img { /* up to change */
+		width: 65%;
 	}
 </style>

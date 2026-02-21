@@ -19,9 +19,9 @@ List of implementations required
 
   - ***About Page***
     - [ ] Each section per page
-      - [ ] Team section
+      - [x] Team section
       - [ ] Board section
-      - [ ] Maybe make separate link for these 2 sections
+      - [x] Maybe make separate link for these 2 sections
     - [ ] Media
       - [ ] Video (optional)
       - [x] Image(s)
@@ -50,11 +50,17 @@ List of implementations required
       - [x] Image(s)
       - [ ] Image gallery(?) (optional)
   
-- General Design (CSS)
+- General Design (CSS) (Timeline)
   - [ ] Fix zoom on **home page** (responsiveness)
-  - [ ] Update and add onto **event page**
+  - [ ] Add responsiveness to entire page (specifically navbar shifting) important
+  - [ ] Update and add onto **event page** [WIP]
+    - https://codepen.io/utilitybend/pen/RwqBymL
   - [ ] Add two subpages to **about page**
   - [ ] Redesign **contact page** (optional)
+  - [ ] **SET SPONSORS STYLING TOO MATCH OTHER PAGES - SAME MARGINS (change flex orientation)** [URGENT]
+  - [ ] Change formatting design of about page (our team)
+  - [x] Add responsiveness to footer
+  - [ ] Make email form work (for newsletter footer)
 
 
 <!-- https://docs.google.com/document/d/1l381AUC8LLL1S7mYAVhDWJ4uLWiRECP_2615Gg6inuo/edit?tab=t.0 -->

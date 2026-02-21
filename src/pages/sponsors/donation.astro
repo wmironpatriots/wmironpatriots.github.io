@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import Footer from '../../components/Footer.astro';
 import NavigationBar from '../../components/NavigationBar.astro';
 
+import '../../styles/footer.css';
+
 const title = "Sponsors | Donation Method |";
 const current = "sponsors";
 ---
@@ -19,9 +21,27 @@ const current = "sponsors";
 					<h1>Donation Method</h1>
 				</header>
 
-				<div class="main">
-          <div>
-						
+				<div class="text-img-main">
+          <div class="item">
+						<div class="text">
+							<p>
+								Any donations should be made out to Three Village STEM Enrichment Foundation, Inc., P. O. Box 214, East Setauket, NY 11733. Please indicate "Ward Melville Robotics Team" in the check memo or with an attached note for the funds to be directly allocated to the robotics team. Donations can also be made to the paypal link below. Please make sure you include a note stating that the money should be allocated to the Ward Melville Robotics Team.
+							</p>
+						</div>
+
+						<div class="outer-button">
+							<a class="button" href="mailto:ironpatriotswm@gmail.com">
+								<div>
+									Send Email
+								</div>
+							</a>
+
+							<a class="button" href="https://www.paypal.com/donate/?hosted_button_id=MPYUVDAR7YCSC">
+								<div>
+									Send Paypal
+								</div>
+							</a>
+						</div>
 					</div>
         </div>
       </main>
@@ -49,10 +69,15 @@ const current = "sponsors";
 		font-size: 270%;
 	}
 
-	.main {
-		gap: 5em;
+	.page-collection .text-img-main .item {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.item div {
+		width: 100%;
 	}
 
 	.item {
@@ -61,5 +86,31 @@ const current = "sponsors";
 
 	.item h2 {
 		margin-bottom: 0;
+	}
+
+	.outer-button {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.button {
+		text-decoration: none;
+		font-size: 110%;
+		padding: 0.5em;
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+		border-radius: 1.5em;
+		border: 2px solid #FFF;
+		color: #FFF;
+		transition: 0.3s;
+		height: 1.5em;
+		display: flex;
+		align-items: center;
+	}
+
+	.button:hover {
+		color: #FFF;
+		transform: translateY(-0.25em);
 	}
 </style>

@@ -8,6 +8,7 @@ import '../styles/footer.css';
 import cascadeImg from '../assets/cascade.jpg';
 import goatImg from '../assets/decibel.jpg';
 import quincyImg from '../assets/quincy.jpg';
+import artifactorImg from '../assets/artifactor.png';
 
 const title = "Robots |";
 const current = "robots";
@@ -26,6 +27,23 @@ const current = "robots";
 				</header>
 
 				<div class="text-img-main">
+					<div class="intro">
+						<h2>Our Robots</h2>
+						<p>Since 2017, our team has built robots for the FIRST Robotics Competition. Each robot is designed to compete in a different game each year, and is built from scratch by our students with the help of our mentors.</p>
+					</div>
+
+					<div class="item">
+						<div class="text">
+							<h2>Artifactor</h2>
+							<h5>2026 · Rebuilt</h5>
+							<p>Artifactor is a 107 lb robot designed for the 2026 FRC competition. It has a fixed single shooter, a four-bar intake, and a belted indexer. Artifactor ranked 19th at the Finger Lakes Regional and 13th at the Long Island Regional in 2026.</p>
+						</div>
+
+						<div class="image artifactor-image">
+							<img src={artifactorImg.src} alt="Artifactor, the team's 2026 robot" />
+							<p class="image-fallback" hidden>Artifactor image coming soon</p>
+						</div>
+					</div>
 					<div class="item"> <!-- img -> text -->
 						<div class="text">
 							<h2>Cascade</h2>
@@ -69,3 +87,16 @@ const current = "robots";
 		</footer>
 	</article>
 </Base>
+
+<script>
+	const showImageFallback = (image: HTMLImageElement) => {
+		image.hidden = true;
+		image.parentElement?.querySelector<HTMLElement>('.image-fallback')?.removeAttribute('hidden');
+	};
+
+	document.querySelectorAll<HTMLImageElement>('.artifactor-image img').forEach((image) => {
+		image.addEventListener('error', () => showImageFallback(image));
+
+		if (image.complete && image.naturalWidth === 0) showImageFallback(image);
+	});
+</script>

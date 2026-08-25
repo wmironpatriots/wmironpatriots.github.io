@@ -136,6 +136,20 @@ article {
 	width: 100%;
 }
 
+.text-img-main .image-fallback {
+	min-height: 16rem;
+	display: grid;
+	place-items: center;
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+	font-weight: 600;
+}
+
+.text-img-main .image-fallback[hidden] {
+	display: none;
+}
+
 footer {
 	text-align: center;
 	bottom: 0;

@@ -41,6 +41,45 @@ const { title, blog } = Astro.props;
 		<ClientRouter />
 	</head>
 	<body>
+		<aside class="sponsor-night-banner" aria-label="Sponsor Night announcement">
+			<strong>Annual Sponsor Night - Tuesday, September 22</strong>
+			<span>Interested in sponsoring?</span>
+			<a href="/sponsors/information">Learn more →</a>
+		</aside>
 		<slot />
 	</body>
 </html>
+
+<style>
+	.sponsor-night-banner {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		padding: 0.8rem 1rem;
+		color: #fff;
+		background: #00a359;
+		box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+		text-align: center;
+	}
+
+	.sponsor-night-banner a {
+		color: #fff;
+		font-weight: 700;
+		text-underline-offset: 0.15em;
+	}
+
+	.sponsor-night-banner a:hover {
+		color: #e1e3e1;
+	}
+
+	@media (max-width: 640px) {
+		.sponsor-night-banner {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+	}
+</style>

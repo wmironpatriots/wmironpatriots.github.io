@@ -1,4 +1,5 @@
 # TODO List
+
 List of implementations required
 
 - [ ] ~~Implement fullpage.js~~ (UPDATE: implement using pure css and html)
@@ -6,9 +7,9 @@ List of implementations required
     ~~- [ ] **Recieve license key**~~
     - [ ] Media
       - [ ] *Videos* (auto play)
-        - [ ] *Video background* (optional)
-      - [ ] Images
-        - [ ] Gallery
+      - [ ] *Video background* (optional)
+    - [ ] Images
+      - [ ] Gallery
     - [ ] [Footer](https://alvarotrigo.com/fullPage/examples/autoHeight.html)
       - *Note: don't add to home page*
 
@@ -61,6 +62,5 @@ List of implementations required
   - [ ] Change formatting design of about page (our team)
   - [x] Add responsiveness to footer
   - [ ] Make email form work (for newsletter footer)
-
 
 <!-- https://docs.google.com/document/d/1l381AUC8LLL1S7mYAVhDWJ4uLWiRECP_2615Gg6inuo/edit?tab=t.0 -->

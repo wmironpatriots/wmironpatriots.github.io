@@ -53,4 +53,4 @@ Please avoid pushing unfinished work directly to `main`.
 
 ## Website
 
-[frc6423.org](https://frc6423.org?utm_source=chatgpt.com)
+[frc6423.org](https://frc6423.org)

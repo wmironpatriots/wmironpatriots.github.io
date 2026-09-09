@@ -1,8 +1,8 @@
 # frc6423.org
 
-Official website for **Ward Melville FRC Team 6423 — the Iron Patriots**.
+Official website for **FRC Team 6423**.
 
-Built with **Astro** and deployed with **GitHub Pages**.
+Built with **Astro**.
 
 ## Getting Started
 

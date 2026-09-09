@@ -1,4 +1,8 @@
-import { config, fields, collection } from '@keystatic/core';
+import {
+  config,
+  fields,
+  collection,
+} from '@keystatic/core';
 
 const sponsorCollection = (label: string, season: string) =>
   collection({
@@ -36,6 +40,85 @@ const sponsorCollection = (label: string, season: string) =>
     },
   });
 
+const robotCollection =
+  collection({
+    label: 'Robots',
+    slugField: 'name',
+    path: 'src/content/robots/*',
+
+    schema: {
+      name: fields.slug({
+        name: {
+          label: 'Robot Name',
+        },
+      }),
+
+      year: fields.text({
+        label: 'Year',
+        description: 'For example, 2026–2027',
+      }),
+
+      game: fields.text({
+        label: 'Game',
+      }),
+
+      description: fields.text({
+        label: 'Description',
+        multiline: true,
+      }),
+
+      image: fields.image({
+        label: 'Robot Image',
+        directory: 'src/assets/robots',
+        publicPath: '../../assets/robots/',
+      }),
+
+      github: fields.url({
+        label: 'GitHub Repository',
+      }),
+
+      cad: fields.url({
+        label: 'CAD Link',
+      }),
+    },
+  });
+
+const miscAssets = collection({
+  label: 'Misc Assets',
+  slugField: 'name',
+  path: 'src/content/assets/*',
+
+  schema: {
+    name: fields.slug({
+      name: {
+        label: 'Asset Name',
+      },
+    }),
+
+    category: fields.select({
+      label: 'Category',
+      options: [
+        { label: 'Branding', value: 'branding' },
+        { label: 'Background', value: 'background' },
+        { label: 'Outreach', value: 'outreach' },
+        { label: 'Event', value: 'event' },
+        { label: 'General', value: 'general' },
+      ],
+      defaultValue: 'general',
+    }),
+
+    description: fields.text({
+      label: 'Description',
+    }),
+
+    image: fields.image({
+      label: 'Image',
+      directory: 'src/assets/misc',
+      publicPath: '../../assets/misc/',
+    }),
+  },
+});
+
 export default config({
   storage: {
     kind: 'local',
@@ -56,5 +139,9 @@ export default config({
       'Sponsors 2024–2025',
       '2024-2025'
     ),
+
+    robots: robotCollection,
+
+    miscAssets,
   },
 });

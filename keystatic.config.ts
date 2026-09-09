@@ -18,6 +18,16 @@ export default config({
           },
         }),
 
+        season: fields.select({
+          label: 'Season',
+          options: [
+            { label: '2026–2027', value: '2026-2027' },
+            { label: '2025–2026', value: '2025-2026' },
+            { label: '2024–2025', value: '2024-2025' },
+          ],
+          defaultValue: '2026-2027',
+        }),
+
         tier: fields.select({
           label: 'Sponsor Tier',
           options: [

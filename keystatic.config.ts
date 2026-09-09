@@ -100,9 +100,11 @@ const miscAssets = collection({
       options: [
         { label: 'Branding', value: 'branding' },
         { label: 'Background', value: 'background' },
+        { label: 'Business', value: 'business' },
         { label: 'Outreach', value: 'outreach' },
         { label: 'Event', value: 'event' },
         { label: 'General', value: 'general' },
+        {label: 'Other', value: 'other' },
       ],
       defaultValue: 'general',
     }),

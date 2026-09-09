@@ -1,0 +1,11 @@
+name: Decibel
+year: '2024'
+game: crescendo
+description: >-
+  Decibel is a 104 lb robot designed for the 2024 FRC competition. It has a
+  full-width over-the-bumper intake, a static shooter, and a dedicated amp
+  mechanism. Decibel was rank 8 at the Hudson Valley Regional, earned the
+  Innovation In Control Award, rank 2 at the Long Island Regional and earned the
+  Quality Award in 2024.
+image: ../../assets/robots/decibel/image.jpg
+github: https://github.com/wmironpatriots/2024-Competition-Robot

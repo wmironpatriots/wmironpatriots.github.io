@@ -1,0 +1,10 @@
+name: artifactor
+year: '2026'
+game: rebuilt
+description: >-
+  Artifactor is a 107 lb robot designed for the 2026 FRC competition. It has a
+  fixed single shooter, a four-bar intake, and a belted indexer. Artifactor
+  ranked 19th at the Finger Lakes Regional and 13th at the Long Island Regional
+  in 2026.
+image: ../../assets/robots/artifactor/image.png
+github: https://github.com/wmironpatriots/y2026

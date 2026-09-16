@@ -1,8 +1,8 @@
 # frc6423.org
 
-Official website for **Ward Melville FRC Team 6423 — the Iron Patriots**.
+Official website for **FRC Team 6423**.
 
-Built with **Astro** and deployed with **GitHub Pages**.
+Built with **Astro**.
 
 ## Getting Started
 
@@ -53,4 +53,4 @@ Please avoid pushing unfinished work directly to `main`.
 
 ## Website
 
-[frc6423.org](https://frc6423.org?utm_source=chatgpt.com)
+[frc6423.org](https://frc6423.org)
